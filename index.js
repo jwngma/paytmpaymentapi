@@ -53,10 +53,7 @@ app.post("/getChecksum", [parseUrl, parseJson], (req, res) => {
       function (err, checksum) {
         console.log("Checksum :" + checksum);
 
-        res.status(200).json({
-          message: "Success",
-          checksum: checksum,
-        });
+        res.status(200).json(checksum);
 
         // // var txn_url ="https://securegw-stage.paytm.in/theia/processTransaction"; // for staging
         // var txn_url = "https://securegw.paytm.in/theia/processTransaction"; // for production
